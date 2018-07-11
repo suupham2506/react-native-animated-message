@@ -14,8 +14,8 @@ const deviceHeight = Dimensions.get('window').height;
 
 export default class Message extends Component {
   static propTypes = {
-    messageStyle: View.propTypes.style,
-    textStyle: Text.propTypes.style,
+    messageStyle: PropTypes.style,
+    textStyle: PropTypes.style,
     position: PropTypes.oneOf(['top', 'center', 'bottom']),
     messageType: PropTypes.oneOf(['info', 'success', 'error', 'warning']),
     animation: PropTypes.oneOf(['zoom', 'slideX', 'slideY']),
