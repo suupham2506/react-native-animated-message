@@ -6,7 +6,8 @@ import {
   Animated,
   Easing,
   Dimensions,
-  StyleSheet
+  StyleSheet,
+  ViewPropTypes
 } from 'react-native';
 
 const deviceWidth = Dimensions.get('window').width;
@@ -14,8 +15,8 @@ const deviceHeight = Dimensions.get('window').height;
 
 export default class Message extends Component {
   static propTypes = {
-    messageStyle: PropTypes.style,
-    textStyle: PropTypes.style,
+    messageStyle: ViewPropTypes.style,
+    textStyle: Text.propTypes.style,
     position: PropTypes.oneOf(['top', 'center', 'bottom']),
     messageType: PropTypes.oneOf(['info', 'success', 'error', 'warning']),
     animation: PropTypes.oneOf(['zoom', 'slideX', 'slideY']),
